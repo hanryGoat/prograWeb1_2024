@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>formulario 1</title>
+	<meta charset="utf-8">
+	<meta name="autor" content="UPSLP">
+	<link rel="icon" type="image/png" href="imagen/logo.png">
+	
+</head>
+<body>
+	<header>
+			<h1 align="center">Practica 1</h1>
+            <h1 align="center">Venta en linea</h1>
+		<nav>
+		<ul>
+			<li><a href="#ventas">ventas</a></li>
+		</ul>
+	</nav>
+	</header>
+    <section id="ventas">
+	<form method="post" action="" enctype="text/plain">
+     <fieldset>
+        <legend>datos del usuario</legend>
+         <table>
+         <thead>
+        <tr>
+            <th>formulario</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+           <td>
+            <label for="nombres">Nombre:</label><br/>
+               <input type="text" name="nombres" id="nombres" maxlength="25" placeholder="Nombre" title="nombre tuyo" required>
+           </td>
+           <td>
+            <label for="apellido">Apellido paterno</label><br/>
+               <input type="text" name="apellido" id="apellido" maxlength="20" placeholder="apellido paterno" title="apellido paterno1">
+           </td>
+           <td>
+            <label for="apellidoM">Apellido materno</label><br/>
+               <input type="text" name="apellidoM" id="apellidoM" maxlength="20" placeholder="apellido materno" title="apellido materno">
+           </td>
+        </tr>
+    </tbody>
+    <tfoot>
+         <tr>
+            <td>
+                <label for="usuario">Nombre de usuario</label><br/>
+                <input type="text" name="usuario" id="usuario" maxlength="30" placeholder="usuario" title="usuario1" required>
+            </td>
+            <td>
+                <label for="pass">Contraseña:</label><br/>
+                <input type="password" name="pass" id="pass" maxlength="25" size="15" placeholder="password" title="password" required>
+            </td>
+            <td>
+                <label for="fecha">Fecha de nacimiento:</label><br/>
+                <input type="date" name="fecha" id="fecha">
+            </td>
+        </tr>
+    </tfoot>
+    </table>
+     </fieldset>
+     <fieldset>
+         <legend>Datos de facturacion</legend>
+         <table>
+         <thead>
+        <tr>
+              <th>
+            <label for="pais">Pais:</label><br/>
+               <select name="pais" id="pais" multiple size="8">
+                   <option>Mexico</option>
+                    <option>Canada</option>
+                    <option>E.U.A</option>
+                    <option>Colombia</option>
+                    <option>Argentina</option>
+                    <option>Chile</option>
+                    <option>Venezuela</option>
+                    <option>Salvador</option>
+               </select>
+           </th>
+           <th>
+                <label for="ciudad">Ciudad:</label><br/>
+               <select name="ciudad" id="ciudad" multiple size="5">
+                   <option>San Luis Potosi</option>
+                   <option>Monterrey</option>
+                   <option>Campeche</option>
+                   <option>Cd. valles</option>
+                   <option>CD. Mexico</option>
+               </select>
+           </th>
+           <th>
+            <label for="calle">Calle:</label><br/>
+               <input type="text" name="calle" id="calle" maxlength="30" placeholder="calle" title="calle">
+           </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <label for="N.casa">Numero de casa</label><br/>
+         <input type="number" name="N.casa" id="N.casa" placeholder="numero exteriro" title="numero de casa"> 
+            </td>
+            <td>
+                <label for="colonia">Colonia:</label><br/>
+                <input type="text" name="colonia" id="colonia" maxlength="30" placeholder="colonia" title="colonia">
+            </td>
+            <td>
+                <label for="correo">E-mail:</label><br/>
+            <input type="email" name="correo" id="correo" placeholder="E-mail" required>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+         <tr>
+          <td>
+            <label for="RFC">R.F.C:</label><br/>
+              <input type="text" name="RFC" id="RFC" maxlength="20" placeholder="R.F.C" title="rfc" required>
+          </td>
+          <td>
+                   <label for="CP">Codigo postal:</label><br/>
+         <input type="number" name="CP" id="CP" placeholder="codigo postal" title="codigo postal"> 
+          </td>
+          <td>
+              <input type="submit" name="envio" id="envio" value="Enviar formulario">
+          </td>
+          <td>
+              <input type="reset" name="borrar" value="borrar formulario" id="borrar">
+          </td>
+        </tr>
+    </tfoot>
+    </table>
+     </fieldset>   
+    </form>
+  </section>
+</body>
+</html>

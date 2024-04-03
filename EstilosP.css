@@ -82,7 +82,16 @@
             width: 100%;
         }
 
-        td{
-            border: 1px solid purple;
-            background-color: white;
+          tr:hover {
+        background-color: lightgreen;
         }
+
+
+    
+
+       table td{
+            border: 1px solid purple;
+          
+        }
+
+    

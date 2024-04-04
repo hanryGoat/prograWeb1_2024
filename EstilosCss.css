@@ -1,0 +1,76 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#contenedor{
+    width: 70%;
+    margin: 20px auto;
+    background-color: #E3F2F8;
+    padding: 5%;
+    border-radius: 10px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1{
+    border: 5px solid blue;
+    text-align: center;
+    background: -webkit-radial-gradient(center,circle #18C1F3 , blue);
+    
+}
+form{
+     background-color: beige;
+    border: 5px solid blue;
+    border-radius: 5px;
+    text-align: center;
+}
+label{
+     display: block;
+    margin-bottom: 20px;
+}
+input[type="text"],
+input[type="email"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: 1px solid #ECF318;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ECF318;
+    color: #0B0C09;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #F30122;
+}
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color:  #040101;
+}
+
+footer cite {
+    font-style: normal;
+    color: #131F6D;
+}
+h2 {
+    color: #007bff;
+    margin-top: 20px;
+}
+
+
+#cont {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Estilos para el texto del pie de página */
+footer h4 {
+    margin-top: 10px;
+}
+

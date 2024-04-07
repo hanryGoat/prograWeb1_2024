@@ -1,0 +1,98 @@
+body {
+    background-color: #80F3E3;
+    font-family: Arial, sans-serif; /* Familia de fuentes */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #090901; /* Color de fondo del encabezado */
+    color: #D6FC01; /* Color del texto en el encabezado */
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: darkred; 
+}
+
+nav ul a:hover {
+    color: #1065DE; 
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #090901; 
+    color: #D6FC01;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilos específicos para la barra de navegación */
+nav {
+    background-color: #090901; 
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #090901;
+    width: 100%;
+}
+
+nav ul li.menu {
+    margin: 0 10px;
+    display: inline-block;
+    color:  #D6FC01;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav ul li.menu:hover {
+    background-color: #C6E3E0; 
+}
+
+section {
+    display: flex; 
+}
+
+article {
+    flex: 2; 
+    padding: 30px;
+}
+
+aside#der {
+    flex: 1; 
+    background-color:#2D655E;
+    color: #D6FC01;
+    padding: 20px;
+}
+
+aside#der h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+aside#der form {
+    text-align: center;
+}
+
+aside#der input[type="text"],
+aside#der input[type="password"],
+aside#der input[type="submit"] {
+    display: block;
+    width: 80%;
+    margin: 30px auto;
+    padding: 10px;
+}

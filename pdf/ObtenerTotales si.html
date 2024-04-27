@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="estilosFormu.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>	
+</head>
+<script>
+var total;
+function califica()
+    {var total=0;
+    	//Evalua cada pregunta
+    	for (var x=1;x<=10;x++)
+    	{
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==100)
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+        	if(total==50)
+        	document.getElementById("comentario").innerHTML="Regular!!";
+        else
+        	if(total<=15)
+        	document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+
+ 
+function generar(){
+
+//Crear un objeto o instancia jsPDF
+var doc = new jsPDF();
+
+//Definir el tamaño de la letra
+doc.setFontSize(40);
+//Color del texto
+doc.setTextColor(9,7,121);
+doc.text(40, 20, "Conceptos basicos");
+doc.setTextColor(17, 122, 209); //Color en formato RGB
+doc.setFontSize(30);
+doc.text(50, 35, "Resultados del test"); //Ubicación, Texto
+doc.setTextColor(0,0,0);
+doc.setFontSize(10);
+doc.text(20, 50, "100 puntos. Muy bien. \r Todas tus respuestas son correctas");
+doc.text(20, 70, "50 puntos. Regular. \r Obtuviste 3 preguntas correctas");
+doc.text(20, 90, "0 puntos. \r Todas tus respuestas son incorrectas");
+
+doc.text(20, 120, " \r Jonathan Bautista Hernandez 182910");
+
+
+//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+
+var string = doc.output('datauristring');
+
+$('iframe').attr('src', string);
+
+}
+</script>
+
+<body>
+    <div id="contiene">
+	<h1>Responde la encuesta</h1>
+	<h2>Tu opinión es importante</h2>
+<div>
+	<form>
+	<ul>
+
+		<li>En que año nacio cristiano ronaldo?</li>
+		<input type="radio" name="r1" id="r1" value="0"/>1983 <br/>
+		<input type="radio" name="r1" id="r1" value="10"/>1985 <br/>
+		<input type="radio" name="r1" id="r1" value="0"/> 1987 <br/>
+		<input type="radio" name="r1" id="r1" value="0"/>1989<br/>
+		
+		<li>En que equipo comenzo su carrera profecional cristiano ronaldo?</li>
+		<input type="radio" name="r2" id="r2" value="10"/>Sporting de Lisboa<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Manchester United<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Real Madrid<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Juventus<br/>
+
+		<li>cuantas veses a ganado Cristiano Ronaldo el balon de oro hasta la fecha?</li>
+		<input type="radio" name="r3" id="r3" value="0"/>3<br/>
+		<input type="radio" name="r3" id="r3" value="10"/>5<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>7<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>4<br/>
+
+        <li>En que año se unio cristiano ronaldo a la Juventus?</li>
+		<input type="radio" name="r4" id="r4" value="0"/>2016<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>2017<br/>
+		<input type="radio" name="r4" id="r4" value="10"/>2018<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>2019<br/>
+
+		<li>Cual es la seleccion nacional para la que juega cristiano Ronaldo?</li>
+		<input type="radio" name="r5" id="r5" value="0"/>españa<br/>
+		<input type="radio" name="r5" id="r5" value="10"/>Portugal<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Mexico<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Argentina<br/>
+		
+		<li>En que club jugaba Cristiano ronaldo cuando gano su primer balon de oro?</li>
+		<input type="radio" name="r6" id="r6" value="10"/>Manchester United<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>Real Madrid<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>Juventus<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>Sporting de Lisboa<br/>
+
+		<li>Cuál es el récord de goles marcados por Cristiano Ronaldo en una sola temporada de la Liga de Campeones de la UEFA?</li>
+		<input type="radio" name="r7" id="r7" value="0"/>12<br/>
+		<input type="radio" name="r7" id="r7" value="0"/>17<br/>
+		<input type="radio" name="r7" id="r7" value="0"/>14<br/>
+		<input type="radio" name="r7" id="r7" value="10"/>16<br/>
+
+        <li>En que posicion juega cristiano ronaldo en el campo?</li>
+		<input type="radio" name="r8" id="r8" value="10"/>Delantero<br/>
+		<input type="radio" name="r8" id="r8" value="0"/>Centrocampista<br/>
+		<input type="radio" name="r8" id="r8" value="0"/>defensa<br/>
+		<input type="radio" name="r8" id="r8" value="0"/>portero<br/>
+
+		<li>Cuál es el nombre completo de Cristiano Ronaldo?</li>
+		<input type="radio" name="r9" id="r9" value="10"/> Cristiano Ronaldo dos Santos Aveiro<br/>
+		<input type="radio" name="r9" id="r9" value="0"/>Cristiano Ronaldo da Silva Santos<br/>
+		<input type="radio" name="r9" id="r9" value="0"/>Cristiano Ronaldo dos Santos Ronaldo <br/>
+		<input type="radio" name="r9" id="r9" value="0"/>Cristiano Ronaldo de Lima<br/>
+		
+		<li>Cuál fue el primer club en el que jugó Cristiano Ronaldo en la Premier League?</li>
+		<input type="radio" name="r10" id="r10" value="0"/>Chelsea<br/>
+		<input type="radio" name="r10" id="r10" value="0"/>Manchester City<br/>
+		<input type="radio" name="r10" id="r10" value="10"/>Manchester United<br/>
+		<input type="radio" name="r10" id="r10" value="0"/>Arsenal<br/>
+	</ul>
+</form>
+</div>
+<input type="button" value="Calificar" onclick="califica()">
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<input type="button" onclick="generar()" value="Ver resultados"/> <br/>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>

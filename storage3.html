@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>API Web Storage Blog de contraseñas</title>
+<link rel="stylesheet" href="storage.css">
+<script src="storage3.js"></script>
+</head>
+<body>
+	<header>
+    <h1>Mi Blog de Contraseñas</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="container">
+    <section id="cajaformulario">
+        <h2>Guardar Contraseña</h2>
+        <form name="formulario">
+            <p>Inicio de Sesión:<br><input type="text" name="seccion" id="seccion"></p>
+            <p>Contraseña:<br><textarea name="text" id="texto"></textarea></p>
+            <p><input type="button" name="grabar" id="grabar" value="Grabar"></p>
+            <p><input type="button" name="eliminar" id="eliminar"
+value="Borrar datos" onclick="elimina()"></p>
+        </form>
+    </section>
+
+    <section id="cajadatos">
+        <h2>Contraseñas Guardadas</h2>
+        <div>No hay información disponible</div>
+    </section>
+</section>
+
+<footer>
+    <p>&copy; 2024 Mi Blog de Contraseñas. Upslp.</p>
+</footer>
+
+
+</body>
+</html>

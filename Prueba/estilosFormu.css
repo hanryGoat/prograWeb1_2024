@@ -1,0 +1,69 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+#contiene {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Para centrar los elementos hijos */
+}
+
+form {
+    display: inline-block; /* Para que el formulario no ocupe todo el ancho */
+    text-align: left; /* Restablecer el texto alineado a la izquierda para el contenido del formulario */
+}
+
+
+h1, h2 {
+    font-family: 'Charmonman', cursive;
+    text-align: center;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="button"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+#total, #comentario {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+iframe {
+    display: block;
+    margin-top: 20px;
+    border: none;
+    width: 100%;
+    height: 500px;
+}

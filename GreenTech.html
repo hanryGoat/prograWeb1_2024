@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	  <title>Programación Web I Green Tech</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="estilo/bootstrap.min.css">
+	  <link rel="stylesheet" href="estilo/sitio.css">
+	   <link rel="stylesheet" type="text/css" href="estilo/EstilosP.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script type="text/javascript">
+ var vsid = "si271272760234a";
+ (function() { 
+ var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
+  vsjs.src = 'https://www.virtualspirits.com/vsa/chat.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
+ })();
+</script>
+	</head>
+	<body>
+		  <header>
+        <h1>Green Tech</h1>
+        <p>Tu fuente de información sobre tecnología verde</p>
+        <p>
+            Nombres de los integrantes: Jonathan Bautista Hernandez 182910 <br/>
+        </p>
+    </header>
+		<script src="script/funciones.js"></script>
+		<!-- inicia barra de navegacion -->
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			  </button>
+			  <a class="navbar-brand" href="GreenTech.html">Gren Tech</a>
+			</div>
+			<!--Finaliza el menu colapsable-->
+			<!--Inician las opciones de menú-->
+			<div class="collapse navbar-collapse" id="myNavbar">
+			  <ul class="nav navbar-nav">
+				<!-- 1er elemento del menú -->
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Inicio<span class="caret"></span></a>
+				  <ul class="dropdown-menu" role="menu">
+					<li><a href="#" id="pag_1" onclick="cargaPractica('html/Green_Tech1.html');return false;">Sobre Nosotros</a></li>
+					
+				  </ul>
+				</li>
+				<!-- 2er elemento del menú -->
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Informacion<span class="caret"></span></a>
+				  <ul class="dropdown-menu" role="menu">
+					<li><a href="#" id="pag_7" onclick="cargaPractica('html/Informacion.html');return false;">Informacion Inicial</a></li>
+					<li><a href="#" id="pag_7" onclick="cargaPractica('html/Impacto.html');return false;">Impacto</a></li>
+					<li><a href="#" id="pag_7" onclick="cargaPractica('html/Situacion_Actual.html');return false;">Situacion Actual</a></li>
+					<li><a href="#" id="pag_7" onclick="cargaPractica('html/Vision_Futuro.html');return false;">Vision a Futuro</a></li>
+					<li class="divider"></li>
+					
+				  </ul>
+				</li>
+				<!-- 3er elemento del menú -->
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Videos y Galeria<span class="caret"></span></a>
+				  <ul class="dropdown-menu" role="menu">
+					<li class="divider"></li>
+					<li><a href="#" id="pag_8" onclick="cargaPractica('html/Videos.html');return false;">Videos de Green Tech</a></li>
+					<li><a href="#" id="pag_9" onclick="cargaPractica('html/Galeria.html');return false;">Galeria de Memes de Green Tech</a></li>
+					<li class="divider"></li>
+				  </ul>
+				</li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Interaccion<span class="caret"></span></a>
+				  <ul class="dropdown-menu" role="menu">
+					<li><a href="#" id="pag_7" onclick="cargaPractica('html/Administrativos.html');return false;">Blog</a></li>
+					<li><a href="#" id="pag_7" onclick="cargaPractica('html/Administrativos.html');return false;">Contacto</a></li>
+					<li><a href="#" id="pag_7" onclick="cargaPractica('html/Formulario.html');return false;">Cuestionario</a></li>
+					<li class="divider"></li>
+					
+				  </ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ayuda<span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#" id="pag_7" onclick="cargaPractica('html/Preguntas_Frecuentes.html');return false;">Preguntas Frecuentes</a></li>
+					<li><a href="#" id="pag_7" onclick="cargaPractica('html/Administrativos.html');return false;">GGrupo de ayudas</a></li>
+					<li><a href="#" id="pag_7" onclick="cargaPractica('html/Administrativos.html');return false;">Redes sociales</a></li>
+					<li class="divider"></li>
+					
+				  </ul>
+				</li>
+			  </ul>
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Ene - Jun 24</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+		
+		<div class="container-fluid text-center">    
+		  <div class="row content">
+			<div class="col-sm-2 sidenav">
+			</div>
+			<div class="col-sm-8 text-left" id="content" style="height: 800px"> 
+				<!-- Contenido -->
+				<img src="GreenTech/logo1.png" width="900px" class="img-responsive center-block" alt="Imagen centrada">
+
+			</div>
+			<div class="col-sm-2 sidenav">
+			</div>
+		  </div>
+		</div>
+		<footer class="container-fluid text-center">
+		  <p>&copy; 2024 Green Tech. Universidad de San Luis Potosi</p>
+		  <p>iNGENUIERIA EN TECNOLOGIAS DE LA INFORMACION</p>
+		</footer>
+	</body>
+</html>

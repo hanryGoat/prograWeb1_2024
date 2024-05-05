@@ -1,0 +1,45 @@
+.carousel {/*estilos para el co¿ntenedor del carrusel*/
+  position: relative;/*posicion relativa*/
+  max-width: 1000px;/*agranda la posicion*/
+  margin: auto;/*el margen es automatico*/
+  overflow: hidden;/*oculta cualquier contenido*/
+}
+
+/*estilos para el contenido de carrusel*/
+.carousel-content {
+  display: flex;/*muestra la ikmagenes en orden y fila*/
+}
+
+.carousel-content img {/*estilo para la imagenes */
+  width: 100%;/*la imagenes ocupan el 100% del contenedor*/
+  display: none;/*cuando inicia ocultamos la imagenes */
+}
+
+.carousel-content img.active {/*esta es para activar la imagen*/
+  display: block;/*muestra la imagen activa*/
+}
+
+button {/*es estilos para los botones de navegacion*/
+  position: absolute;/*es para la posicion absoluta*/
+  top: 50%;/*alienea verticalmente los botones*/
+  transform: translateY(-50%);/*corrige la posicion vertical un 50%*/
+  background: rgba(0, 0, 0, 0.5);/*es para el fondo semi treansparente*/
+  color: white;/*el color del texto en blanco*/
+  border: none;/*no hay borde*/
+  padding: 10px;/*es el espacio interno*/
+  cursor: pointer;/*cambia el cursoa al pasar encima*/
+}
+
+#prevBtn {/*para el botton de retroseso*/
+  left: 0;/*posicion en el boton izquierdo*/
+}
+
+#nextBtn {/*paras el botton de avance*/
+  right: 0;/*posiciona el borde derecho*/
+}
+
+h1 {
+  text-align: center;
+  color: #333; /* Cambiamos el color del título */
+  margin-bottom: 20px; /* Agregamos un margen inferior para separar el título del carrusel */
+}

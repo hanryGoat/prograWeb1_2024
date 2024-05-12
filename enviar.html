@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Enviar Formulario</title>
+	    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #38ECD6;
+        }
+
+        h3 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+	<h3>registro de usuarios</h3>
+	<div>
+		<form action="mensajero.php" method="post">
+			<label for="nombre">nombre del usuario</label>
+			<input type="text" id="nombre" name="nombre" placeholder="User">
+
+			<label for="email">E-mail</label>
+			<input type="text" id="email" name="email" placeholder="Email">
+
+			<label for="mensaje">Comentario</label>
+			<textarea id="mensaje" name="mensaje"></textarea>
+
+			<input type="submit" id="submit" name="submit" value="enviar formulario">
+		</form>
+	</div>
+</body>
+</html>

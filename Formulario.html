@@ -43,35 +43,47 @@ function califica()
     }
 
  
-function generar(){
+function generar() {
+    var doc = new jsPDF();
 
-//Crear un objeto o instancia jsPDF
-var doc = new jsPDF();
+    // Título
+    doc.setFontSize(22);
+    doc.setTextColor(181, 231, 39);
+    doc.text(20, 20, "Resultados del Cuestionario de Green Tech");
 
-//Definir el tamaño de la letra
-doc.setFontSize(40);
-//Color del texto
-doc.setTextColor(9,7,121);
-doc.text(40, 20, "Conceptos de Green tech");
-doc.setTextColor(17, 122, 209); //Color en formato RGB
-doc.setFontSize(30);
-doc.text(50, 35, "Resultados de Green Tech"); //Ubicación, Texto
-doc.setTextColor(0,0,0);
-doc.setFontSize(10);
-doc.text(20, 50, "150 puntos. Muy bien. \r Todas tus respuestas son correctas conoces muy bien el tema");
-doc.text(20, 70, "75 puntos. Regular. \r Obtuviste  preguntas correctas e incorrectas debes de seguir practicando");
-doc.text(20, 90, "0 puntos. \r Todas tus respuestas son incorrectas sigue estudiando");
+    // Subtítulo
+    doc.setFontSize(16);
+    doc.setTextColor(17, 122, 209);
+    doc.text(20, 40, "Puntuaciones y Comentarios:");
 
-//doc.text(20, 120, " \r Jonathan Bautista Hernandez 182910");
+    // Línea separadora
+    doc.setDrawColor(0, 0, 0);
+    doc.line(20, 45, 190, 45);
 
+    // Comentarios en tabla
+    doc.setFontSize(12);
+    doc.setTextColor(0, 0, 0);
+    doc.text(20, 55, "Puntuación:");
+    doc.text(80, 55, "Comentario:");
 
-//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+    doc.line(20, 60, 190, 60);
 
-var string = doc.output('datauristring');
+    doc.text(20, 70, "150 puntos:");
+    doc.text(80, 70, "EXCELENTE!!! Todas tus respuestas son correctas y conoces muy bien el tema.");
 
-$('iframe').attr('src', string);
+    doc.text(20, 85, "75 puntos:");
+    doc.text(80, 85, "Regular. Obtuviste algunas preguntas correctas e incorrectas, debes seguir practicando.");
 
-}
+    doc.text(20, 100, "0 puntos:");
+    doc.text(80, 100, "Todas tus respuestas son incorrectas. Sigue estudiando.");
+
+    // Más contenido si es necesario
+    doc.line(20, 105, 190, 105);
+
+    // Salida en un iframe
+    var string = doc.output('datauristring');
+    $('iframe').attr('src', string);
+} 
 </script>
 
 <body>

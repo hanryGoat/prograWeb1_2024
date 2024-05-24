@@ -101,6 +101,31 @@
       const commentForm = document.getElementById('comment-form');
       const commentsContainer = document.getElementById('comments-container');
 
+      // Cargar comentarios desde localStorage
+      function loadComments() {
+        const comments = JSON.parse(localStorage.getItem('comments')) || [];
+        comments.forEach(({ name, comment }) => {
+          addCommentToDOM(name, comment);
+        });
+      }
+
+      // Guardar comentarios en localStorage
+      function saveComment(name, comment) {
+        const comments = JSON.parse(localStorage.getItem('comments')) || [];
+        comments.push({ name, comment });
+        localStorage.setItem('comments', JSON.stringify(comments));
+      }
+
+      // Añadir comentario al DOM
+      function addCommentToDOM(name, comment) {
+        const commentElement = document.createElement('div');
+        commentElement.classList.add('comment');
+        commentElement.innerHTML = `
+          <strong>${name}</strong>: ${comment}
+        `;
+        commentsContainer.appendChild(commentElement);
+      }
+
       commentForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
@@ -115,17 +140,15 @@
           return;
         }
 
-        const commentElement = document.createElement('div');
-        commentElement.classList.add('comment');
-        commentElement.innerHTML = `
-          <strong>${name}</strong>: ${comment}
-        `;
-
-        commentsContainer.appendChild(commentElement);
+        addCommentToDOM(name, comment);
+        saveComment(name, comment);
 
         nameInput.value = '';
         commentInput.value = '';
       });
+
+      // Cargar comentarios al iniciar la página
+      loadComments();
     });
   </script>
 </body>

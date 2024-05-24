@@ -161,18 +161,3 @@
 
 
 }
-    
-      .conteiner-redes {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .conteiner-redes a {
-        margin: 0 10px; /* Espacio entre los iconos */
-    }
-
-    .conteiner-redes img {
-        width: 30px; /* Tamaño de las imágenes */
-        height: auto; /* Para mantener la proporción */
-    }
